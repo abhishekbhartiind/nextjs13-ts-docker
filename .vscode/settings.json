@@ -1,0 +1,27 @@
+{
+  // Enable ESLint as a formatter
+  "eslint.format.enable": true,
+
+  // Enable Prettier as a formatter for css files (in addition to Stylelint linting)
+  "[css][scss][markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+
+  // Disable vscode's default CSS linting and use Stylelint instead
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "stylelint.validate": ["css", "scss"],
+
+  // Auto fix on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+
+  // Use the workspace version of TypeScript
+  // See https://github.com/mrmckeb/typescript-plugin-css-modules#visual-studio-code
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
